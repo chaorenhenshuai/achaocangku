@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-model练习</title>
+    <script src = "js/vue.js"></script>
+</head>
+<body>
+    <div id = "app">
+        <form action = "" method = "post">
+            <p>v-model直接可以替换掉 value的值</p>
+            <!--用户名:<input type = "text" name = "username" value = "user.username">
+            密码:<input type = "text" name = "password" value = "user.password">-->
+            用户名:<input type = "text" name = "username" v-model = "user.username">
+            密码:<input type = "text" name = "password" v-model = "user.password">
+        </form>
+    </div>
+<script>
+    new Vue({
+        el : "#app",
+        data : {
+            user : {
+                username : "test",
+                password : "1234"
+            }
+        }
+    });
+</script>
+</body>
+</html>

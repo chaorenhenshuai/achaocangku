@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue练习</title>
+    <script src = "js/vue.js"></script>
+</head>
+<body>
+    <div id = "app">
+        <span v-if = "flag">超人</span><!--不渲染这块内容-->
+        <span v-show = "flag">很帅</span><!--通过display属性进行隐藏-->
+        <button v-on:click = "toggle">切换显示</button>
+    </div>
+<script>
+    new Vue({
+        el : "#app",
+        data : {
+            flag : false
+        },
+        methods : {
+            toggle : function(){
+                this.flag = !this.flag;
+            }
+        }
+    });
+</script>
+</body>
+</html>

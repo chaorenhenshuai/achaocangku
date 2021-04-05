@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue二维对象练习</title>
+    <script src = "js/vue.js"></script>
+</head>
+<body>
+    <div id = "app">
+        <ul>
+            <li v-for = "(key,value) in product">{{key}} === "this is value" -> {{value}}</li>
+        </ul>
+    </div>
+<script>
+    new Vue({
+        el : "#app",
+        data : {
+            product : [{
+                id : 1,
+                name : "笔记本电脑",
+                price : 5000
+            },
+            {
+                id : 2,
+                name : "台式电脑",
+                price : 3000
+            },
+            {
+                id : 3,
+                name : "军事电脑",
+                price : 10000
+            }
+            ]
+        }
+    });
+</script>
+</body>
+</html>

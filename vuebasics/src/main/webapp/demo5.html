@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue遍历数组</title>
+    <script src = "js/vue.js"></script>
+</head>
+<body>
+    <div id = "app">
+        <ul>
+            <!--index表示下标位置  item是数组每一个元素-->
+            <li v-for = "(item,index) in arr">{{item}} ========this is {{index}}</li>
+        </ul>
+    </div>
+<script>
+    new Vue({
+        el : "#app",
+        data : {
+            arr:[1,2,3,4,5]
+        }
+    });
+</script>
+</body>
+</html>
